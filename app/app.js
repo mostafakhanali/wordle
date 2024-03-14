@@ -88,6 +88,8 @@ function start() {
         let i = 0;
         let j = 0;
 
+        // **** Desktop ****
+
         this.addEventListener('keyup', (keybordInput) => {
             char = keybordInput.key;
 
@@ -147,6 +149,12 @@ function start() {
             };
         })
 
+        //  **** Mobile ****
+        const page = document.querySelector(".container");
+
+        page.addEventListener('click', () => {
+            page.focus()
+        })
 
         checkBtn = document.querySelector(".check-btn")
         checkBtn.addEventListener('click', () => {
