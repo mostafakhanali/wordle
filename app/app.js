@@ -153,7 +153,13 @@ function start() {
         const page = document.querySelector(".container");
 
         page.addEventListener('click', () => {
-            navigator.virtualKeyboard.show();
+            if ('virtualKeyboard' in navigator) {
+  // The VirtualKeyboard API is supported! 
+                navigator.virtualKeyboard.overlaysContent = true;
+                navigator.virtualKeyboard.show();
+          }
+
+           
         })
 
         checkBtn = document.querySelector(".check-btn")
