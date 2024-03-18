@@ -153,7 +153,7 @@ function start() {
         const page = document.querySelector(".container");
 
         page.addEventListener('click', () => {
-            page.focus()
+            navigator.virtualKeyboard.show();
         })
 
         checkBtn = document.querySelector(".check-btn")
